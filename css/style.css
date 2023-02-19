@@ -15,6 +15,16 @@
           box-sizing: border-box;
 }
 
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
 html,
 body {
   height: 100%;
@@ -254,7 +264,7 @@ h6 {
   top: 0;
   right: 100%;
   width: 100%;
-  background-color: rgba(52, 86, 254, 0.5);
+  background-color: rgba(52, 86, 254, 0.623);
 }
 
 .menu-open .header__menu::before {
@@ -306,11 +316,20 @@ h6 {
   padding-bottom: 77px;
 }
 
+.footer__container {
+  line-height: 163.9%;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+
 .footer__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   row-gap: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer__info {
@@ -321,32 +340,14 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .footer__logo:not(:last-child) {
   margin-bottom: 30px;
 }
 
-.footer__text {
-  font-size: 20px;
-  line-height: 158.5%;
-  letter-spacing: 0.01em;
-  color: #FFFFFF;
-}
-
 .footer__label {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 163.9%;
-  letter-spacing: 0.02em;
   color: #FFFFFF;
-}
-
-.footer__label:not(:last-child) {
-  margin-bottom: 21px;
 }
 
 .footer__list {
@@ -361,10 +362,6 @@ h6 {
 }
 
 .footer__item {
-  font-size: 20px;
-  line-height: 163.9%;
-  letter-spacing: 0.02em;
-  color: #FFFFFF;
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
@@ -726,6 +723,10 @@ h6 {
     max-width: 373px;
   }
 
+  .footer__list {
+    gap: 1.0625rem;
+  }
+
   .about-1__row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -842,6 +843,10 @@ h6 {
     padding-top: 15.8125rem;
   }
 
+  .footer__container {
+    font-size: 1.25rem;
+  }
+
   .building__text:not(:first-child) {
     margin-left: 10.875rem;
   }
@@ -862,6 +867,12 @@ h6 {
 
   .main-block {
     padding-bottom: 11.3125rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .footer__label:not(:last-child) {
+    margin-bottom: 1.875rem;
   }
 }
 
@@ -886,6 +897,18 @@ h6 {
 
   .header__menu::before {
     min-height: 5rem;
+  }
+
+  .footer__container {
+    font-size: 0.875rem;
+  }
+
+  .footer__label:not(:last-child) {
+    margin-bottom: 0.9375rem;
+  }
+
+  .footer__list {
+    gap: 0.4375rem;
   }
 
   .contact-us__block {
@@ -1022,9 +1045,12 @@ h6 {
   .footer__items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  }
+
+  .footer__info {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 
   .footer__column {
@@ -1192,6 +1218,18 @@ h6 {
       min-height: calc(5rem + 2.3125 * (100vw - 30rem) / 39.5);
     }
 }
+
+@supports (font-size: clamp( 0.875rem , 0.5901898734rem  +  0.9493670886vw , 1.25rem )) {
+    .footer__container {
+      font-size: clamp( 0.875rem , 0.5901898734rem  +  0.9493670886vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.5901898734rem  +  0.9493670886vw , 1.25rem )) {
+    .footer__container {
+      font-size: calc(0.875rem + 0.375 * (100vw - 30rem) / 39.5);
+    }
+}
 }
 
 @media (max-width: 47.99875em) and (min-width: 69.5em) {
@@ -1224,6 +1262,82 @@ h6 {
 @supports not (padding-top: clamp( 3.75rem , -23.1779656706rem  +  56.1013894541vw , 15.8125rem )) {
     .footer {
       padding-top: calc(3.75rem + 12.0625 * (100vw - 47.99875rem) / 21.50125);
+    }
+}
+}
+
+@media (min-width: 30em) and (max-width: 48em) {
+@supports (margin-bottom: clamp( 0.9375rem , -0.625rem  +  5.2083333333vw , 1.875rem )) {
+    .footer__label:not(:last-child) {
+      margin-bottom: clamp( 0.9375rem , -0.625rem  +  5.2083333333vw , 1.875rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 0.9375rem , -0.625rem  +  5.2083333333vw , 1.875rem )) {
+    .footer__label:not(:last-child) {
+      margin-bottom: calc(0.9375rem + 0.9375 * (100vw - 30rem) / 18);
+    }
+}
+}
+
+@media (min-width: 30em) and (max-width: 47.99875em) {
+@supports (gap: clamp( 0.4375rem , -0.6042390097rem  +  3.4724633655vw , 1.0625rem )) {
+    .footer__list {
+      gap: clamp( 0.4375rem , -0.6042390097rem  +  3.4724633655vw , 1.0625rem );
+    }
+}
+
+@supports not (gap: clamp( 0.4375rem , -0.6042390097rem  +  3.4724633655vw , 1.0625rem )) {
+    .footer__list {
+      gap: calc(0.4375rem + 0.625 * (100vw - 30rem) / 17.99875);
+    }
+}
+
+@supports (padding-left: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
+    .contact-us__block {
+      padding-left: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem );
+    }
+}
+
+@supports not (padding-left: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
+    .contact-us__block {
+      padding-left: calc(1.5625rem + 3.5 * (100vw - 30rem) / 17.99875);
+    }
+}
+
+@supports (padding-right: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
+    .contact-us__block {
+      padding-right: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem );
+    }
+}
+
+@supports not (padding-right: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
+    .contact-us__block {
+      padding-right: calc(1.5625rem + 3.5 * (100vw - 30rem) / 17.99875);
+    }
+}
+
+@supports (padding-bottom: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
+    .contact-us__block {
+      padding-bottom: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
+    .contact-us__block {
+      padding-bottom: calc(2.5rem + 5.375 * (100vw - 30rem) / 17.99875);
+    }
+}
+
+@supports (padding-top: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
+    .contact-us__block {
+      padding-top: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
+    .contact-us__block {
+      padding-top: calc(2.5rem + 5.375 * (100vw - 30rem) / 17.99875);
     }
 }
 }
@@ -1344,56 +1458,6 @@ h6 {
 @supports not (margin-bottom: clamp( 3.125rem , -16.6889534884rem  +  41.2790697674vw , 12rem )) {
     .about-2__text-block:not(:last-child) {
       margin-bottom: calc(3.125rem + 8.875 * (100vw - 48rem) / 21.5);
-    }
-}
-}
-
-@media (min-width: 30em) and (max-width: 47.99875em) {
-@supports (padding-left: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
-    .contact-us__block {
-      padding-left: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem );
-    }
-}
-
-@supports not (padding-left: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
-    .contact-us__block {
-      padding-left: calc(1.5625rem + 3.5 * (100vw - 30rem) / 17.99875);
-    }
-}
-
-@supports (padding-right: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
-    .contact-us__block {
-      padding-right: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem );
-    }
-}
-
-@supports not (padding-right: clamp( 1.5625rem , -4.2712384541rem  +  19.4457948469vw , 5.0625rem )) {
-    .contact-us__block {
-      padding-right: calc(1.5625rem + 3.5 * (100vw - 30rem) / 17.99875);
-    }
-}
-
-@supports (padding-bottom: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
-    .contact-us__block {
-      padding-bottom: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
-    .contact-us__block {
-      padding-bottom: calc(2.5rem + 5.375 * (100vw - 30rem) / 17.99875);
-    }
-}
-
-@supports (padding-top: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
-    .contact-us__block {
-      padding-top: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem );
-    }
-}
-
-@supports not (padding-top: clamp( 2.5rem , -6.458955483rem  +  29.8631849434vw , 7.875rem )) {
-    .contact-us__block {
-      padding-top: calc(2.5rem + 5.375 * (100vw - 30rem) / 17.99875);
     }
 }
 }
