@@ -28,7 +28,7 @@ a:active {
 html,
 body {
   height: 100%;
-  min-width: 320px;
+  min-width: 325px;
 }
 
 body {
@@ -928,16 +928,6 @@ h6 {
   }
 }
 
-@media (max-width: 20em) {
-  .main-block {
-    padding-top: 7.5rem;
-  }
-
-  .main-block {
-    padding-bottom: 6.25rem;
-  }
-}
-
 @media (max-width: 61.99875em) {
   .title_main {
     font-size: 2.375rem;
@@ -1154,6 +1144,16 @@ h6 {
   }
 }
 
+@media (max-width: 20.3125em) {
+  .main-block {
+    padding-top: 7.5rem;
+  }
+
+  .main-block {
+    padding-bottom: 6.25rem;
+  }
+}
+
 @media (min-width: 47.99875em) and (max-width: 61.99875em) {
 @supports (font-size: clamp( 1.75rem , -0.3928013393rem  +  4.4642857143vw , 2.375rem )) {
     .title {
@@ -1342,28 +1342,28 @@ h6 {
 }
 }
 
-@media (min-width: 20em) and (max-width: 71.375em) {
-@supports (padding-top: clamp( 7.5rem , 4.7506082725rem  +  13.7469586375vw , 14.5625rem )) {
+@media (min-width: 20.3125em) and (max-width: 71.375em) {
+@supports (padding-top: clamp( 7.5rem , 4.6905599755rem  +  13.8310893513vw , 14.5625rem )) {
     .main-block {
-      padding-top: clamp( 7.5rem , 4.7506082725rem  +  13.7469586375vw , 14.5625rem );
+      padding-top: clamp( 7.5rem , 4.6905599755rem  +  13.8310893513vw , 14.5625rem );
     }
 }
 
-@supports not (padding-top: clamp( 7.5rem , 4.7506082725rem  +  13.7469586375vw , 14.5625rem )) {
+@supports not (padding-top: clamp( 7.5rem , 4.6905599755rem  +  13.8310893513vw , 14.5625rem )) {
     .main-block {
-      padding-top: calc(7.5rem + 7.0625 * (100vw - 20rem) / 51.375);
+      padding-top: calc(7.5rem + 7.0625 * (100vw - 20.3125rem) / 51.0625);
     }
 }
 
-@supports (padding-bottom: clamp( 6.25rem , 4.2791970803rem  +  9.8540145985vw , 11.3125rem )) {
+@supports (padding-bottom: clamp( 6.25rem , 4.2361536108rem  +  9.9143206854vw , 11.3125rem )) {
     .main-block {
-      padding-bottom: clamp( 6.25rem , 4.2791970803rem  +  9.8540145985vw , 11.3125rem );
+      padding-bottom: clamp( 6.25rem , 4.2361536108rem  +  9.9143206854vw , 11.3125rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 6.25rem , 4.2791970803rem  +  9.8540145985vw , 11.3125rem )) {
+@supports not (padding-bottom: clamp( 6.25rem , 4.2361536108rem  +  9.9143206854vw , 11.3125rem )) {
     .main-block {
-      padding-bottom: calc(6.25rem + 5.0625 * (100vw - 20rem) / 51.375);
+      padding-bottom: calc(6.25rem + 5.0625 * (100vw - 20.3125rem) / 51.0625);
     }
 }
 }
