@@ -3159,10 +3159,10 @@
             modules: [ Navigation ],
             observer: true,
             observeParents: true,
-            slidesPerView: 1.37,
             spaceBetween: 56,
             autoHeight: true,
             speed: 1e3,
+            slidesPerView: 1.4,
             grabCursor: true,
             loop: true,
             breakpoints: {
